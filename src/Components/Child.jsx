@@ -1,13 +1,23 @@
 import useFetch from "../Hooks/useFetch";
-import { useEffect } from "react";
 
+const Child = ({arr}) => {
+  const a = useFetch("https://jsonplaceholder.typicode.com/todos");
+  return (
+  <button onClick={()=>arr(a)}>Display</button>
+  )
+};
+export default Child;
+/*
 function Child(props) {
-  const set = useFetch("https://jsonplaceholder.typicode.com/todos");
-  useEffect(() => {
-    console.log(set)
-    
-        props.arr(set)
-    
-  });
+  function Set(a) {
+    const a = useFetch("https://jsonplaceholder.typicode.com/todos");
+    props.arr(a);
+  }
+  return (
+    <>
+      <button onClick={Set(a)}>Display</button>
+    </>
+  );
 }
 export default Child;
+*/

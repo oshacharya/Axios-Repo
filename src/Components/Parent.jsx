@@ -5,15 +5,14 @@ import "../CSS/style.css";
 
 function Parent() {
   const [arr, setArr] = useState([]);
-
   //  function display(args) {
   //   setArr(args);
   // }
+
   return (
     <>
       {/* <Child display={display} /> */}
       <Child arr={setArr} />
-
       <pre>
         {arr.map((arr) => {
           return (
